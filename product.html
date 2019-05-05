@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">  <!-- creates the HTML document in english -->
+  <head> <!-- the head contains general information, which isn't displayed on the page -->
+    <meta charset="utf-8"/> <!-- determines the character set -->
+    <title>Robot Juice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ensures the page recognises the size of the device it's shown on. -->
+    <meta name="author" content="Lauren Blood 23925434"/>
+    <meta name="keywords" content="robot juice, bicycle, bike, oil, cycling"/>
+    <link rel="stylesheet" href="styles/grid.css"/> <!-- links the web-page to the stylesheets. -->
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet'>  <!-- imports the google fonts to be used. -->
+    <link href='https://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet'>
+    <script src="scripts/jquery.min.js"></script> <!-- links the web-page to the relevent javascript -->
+    <script src="scripts/reviews.js"></script>
+    <script src="scripts/extras.js"></script>
+  </head>
+  <body> <!-- covers the entire page. -->
+    <div id="robotCell">  <!-- creates the div to be inserted within the robot cell of the grid. -->
+      <h1>Robot</h1>
+    </div> <!-- closes robot cell div. -->
+    <div id="juiceCell"> <!-- creates the div to be inserted within the juice cell  of the grid. -->
+      <h1>Juice</h1>
+      <p id="slogan">fictitious cycle lubricants</p> <!-- ... and includes the slogan. -->
+    </div> <!-- closes the juice cell div. -->
+    <nav>
+      <ul id="mainNav"> <!-- creates the un-ordered list for the nav. -->
+        <li class="navElement" id="navHome"><a href="index.html">Home</a></li> <!-- uses the 'this page' identifier to alter the appearance of the current page. -->
+        <li class="navElement" id="thisPage"><a href="product.html">Products</a></li>
+        <li class="navElement" id="navProtect"><a href="">Protect</a></li>
+        <li class="navElement" id="navStocklists"><a href="">Stocklists</a></li>
+        <li class="navElement" id="navEvents"><a href="">Events</a><li>
+        <li class="navElement" id="navReviews"><a href="">Reviews</a><li>
+      </ul> <!-- closes nav list. -->
+    </nav> <!-- closes nav. -->
+    <div id="mainContent"> <!-- create the main content div. -->
+      <div id="viewProduct"> <!-- contains the top section (everything above similar products) of the page. -->
+        <div id="productGallery">
+          <img class="galleryImage" src="robot-juice-images/prod-thumb1.jpg" alt="bike oil packaging">
+          <img class="galleryImage" src="robot-juice-images/prod-thumb2.jpg" alt="bike wheel">
+          <img class="galleryImage" src="robot-juice-images/prod-thumb3.jpg" alt="bike oil">
+        </div> <!-- closes the product gallery div. -->
+        <img id="mainProductImage" src="robot-juice-images/robotjuicebikeoil.jpg" alt="bike oil packaging">
+        <div id="productPurchase">
+          <h2> Bike Oil </h2>
+          <p id="price"> £99.99 </p>
+          <div id="dropdown"> <!-- contains both of the dropdown menus for the product purchase. -->
+            <select id="sizeSelect" name="sizeSelect">
+              <option disabled selected>Size</option> <!-- determines the default selection, hence the name of the dropdown menu. -->
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+            <select id="quantitySelect" name="quantitySelect">
+              <option disabled selected>Qty</option>
+              <option value="oneItem">1</option>
+              <option value="twoItems">2</option>
+              <option value="threeItems">3</option>
+            </select>
+          </div>  <!-- closes the dropdown div. -->
+          <button id="buyButton"> Buy now </button>
+          <p class="moreProductInfo" id="stocklist" ><a = href"">Find Nearest Stocklist</a></p>
+          <div id="share">
+            <p class="moreProductInfo">Share</p>
+            <a href= "https://en-gb.facebook.com/"><img class="shareImage" src="robot-juice-images/facebook.jpg" alt="facebook"></a>
+            <a href= "https://twitter.com/"><img class="shareImage" src="robot-juice-images/twitter.jpg" alt="twitter"></a>
+            <a href= "mailto: customerService@robotJuice.com"><img class="shareImage" src="robot-juice-images/email.jpg" alt ="email"></a>
+            <!-- the above links are attached to the share images, however, the final is a link that allows the user to send an email to the robot juice team.. -->
+          </div>
+          <p id="purchaseInfo"> Robot Juice bike oil for bicycles stops rust and other corrosion from starting. Applied to already corroding metals it breaks down the corrosion and starts preventing it from building upand protects from the point of contact.</p>
+        </div> <!-- closes the product purchase div. -->
+      </div> <!-- closes the view product div. -->
+      <h2> Similar Products </h2>
+      <div id="similarProducts"> <!-- contains all the similar images. -->
+        <img class="similarProductImgs" src="robot-juice-images/simProd.jpg" alt="similar product">
+        <img class="similarProductImgs" src="robot-juice-images/simProd2.jpg" alt="similar product">
+        <img class="similarProductImgs" src="robot-juice-images/simProd3.jpg" alt="similar product">
+        <img class="similarProductImgs" src="robot-juice-images/simProd4.jpg" alt="similar product">
+        <img class="similarProductImgs" src="robot-juice-images/simProd5.jpg" alt="similar product">
+        <img class="similarProductImgs" src="robot-juice-images/simProd6.jpg" alt="similar product">
+      </div> <!-- closes similar product div. -->
+      <div id="productReviewTitle">
+        <h2> Product Reviews </h2>
+        <h2 class="redStars"> ***** </h2>  <!-- adds the display stars to the title. -->
+      </div>
+        <ul id="reviews"> <!-- creates the un-ordered list of review. -->
+          <li class="review" id="review1"> <!-- ...where each list item contains an icon, name and review. -->
+            <img class="reviewIcon" src="robot-juice-images/reviewIcon1.jpg" alt ="review icon">
+            <div class="reviewMiddle"> <!-- a div is required (middle meaning the central column) as the star rating will also be placed here. -->
+              <p class="reviewTitle"></p> <!-- nothings is entered as the javascript populates the p tag. -->
+            </div>
+            <p class="reviewText"></p>
+          </li> <!-- closes the individual review list item. -->
+          <li class="review" id="review2">
+            <img class="reviewIcon" src="robot-juice-images/reviewIcon1.jpg" alt ="review icon">
+            <div class="reviewMiddle">
+              <p class="reviewTitle"></p>
+            </div>
+            <p class="reviewText"></p>
+          </li>
+          <li class="review" id="review3">
+            <img class="reviewIcon" src="robot-juice-images/reviewIcon1.jpg" alt ="review icon">
+            <div class="reviewMiddle">
+              <p class="reviewTitle"></p>
+            </div>
+            <p class="reviewText"> </p>
+          </li>
+          <li class="review" id="review4">
+            <img class="reviewIcon" src="robot-juice-images/reviewIcon2.jpg" alt ="review icon">
+            <div class="reviewMiddle">
+              <p class="reviewTitle"></p>
+            </div>
+            <p class="reviewText"> filler text ... </p>
+          </li>
+          <li class="review" id="review5">
+            <img class="reviewIcon" src="robot-juice-images/reviewIcon1.jpg" alt ="review icon">
+            <div class="reviewMiddle">
+              <p class="reviewTitle"></p>
+            </div>
+            <p class="reviewText"> filler text ... </p>
+          </li>
+        </ul> <!-- closes the un-ordered list. -->
+        <button id="moreReviews" class="reviewsHidden"> Read all reviews </button> <!-- adds the button to load more reviews. -->
+      </div> <!-- closes the main content div. -->
+      <div class="footer1">  <!-- contains all white footer elements. -->
+        <img id="cycleMagazine" src="robot-juice-images/cyclemagazine.jpg" alt="cycle magazine">
+        <div id="latestReviews">
+          <p class="footerHeading">Latest Reviews</p>
+          <p> Cycling magazine has given Robot <br> Juice a 5 star rating in its latest <br> reviews of dry lubricants. Robot Juice <br> Dry lube was rated the highest out of <br> over 40 top brand dry lubes. </p>
+        </div>
+        <div id="Links">
+          <p class="footerHeading">Links</p>
+          <ul id="footerLinks">
+            <li class="footerLink"><a href="">Edge Hill University</a></li>
+            <li class="footerLink"><a href="">Dave Walsh</a></li>
+            <li class="footerLink"><a href="https://twitter.com/walsh_d">https://twitter.com/walsh_d</a></li>
+            <li class="footerLink"><a href="">CIS2120 - Designing for web standards module</a></li>
+          </ul>
+        </div>
+      </div> <!-- closes the footer 1 div. -->
+      <div class="footer2"> <!-- contains all red footer elements. -->
+        <div id="redFooterLeft">
+          <p>Robot Juice Fictitous Products Not Ltd., Unit 9¾, Privet Drive, Little Whingeing, Surrey DN18 5RP <br><br>Telephone: +44 (0)1695 657648. Email: walshd@edgehill.ac.uk</p>
+        </div>
+        <div id="redFooterRight">
+          <ul id="footer2Links"> <!-- creates the un-ordered list of links. -->
+            <li class="footer2Link"><a href="">Contact Us</a></li>
+            <li> ∣ </li> <!-- uses separators to that cannot be selected. -->
+            <li class="footer2Link"><a href=""> Privacy</a></li>
+            <li> ∣ </li>
+            <li class="footer2Link"><a href=""> Terms & Conditions </a></li>
+            <li> ∣ </li>
+            <li class="footer2Link"><a href=""> Accessibility</a></li>
+          </ul>
+          <p>Copyright © 2012 Dave Walsh. Design by Dave Walsh</p> <!-- adds the final text to the footer. -->
+        </div> <!-- closes the footer right tag. -->
+      </div> <!-- closes footer 2. -->
+    </body> <!-- closes the body tag. -->
+    </html> <!-- end of html. -->

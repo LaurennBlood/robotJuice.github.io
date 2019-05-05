@@ -1,0 +1,191 @@
+/* Determing the main grid layout */
+body {
+  display: grid; /* The main grid is made in the body.... */
+
+  grid-template-columns: repeat(8, 1fr);  /* With eight columns of equal length */
+  grid-template-rows: 1.5fr 1fr 20fr 3fr 2fr;
+}
+
+#robotCell {
+  grid-column-start: 2;  /* Inserts the robot cell div into the second cell of the first row */
+  grid-row-start: 1;
+
+  display: flex;   /* Uses a flexbox to center the text. */
+  flex-direction: column;
+}
+
+#juiceCell {
+  grid-column-start: 3;  /* Inserts the juice cell div into the third cell of the first row */
+  grid-row-start: 1;
+
+  display: flex;   /* Using a column flexbox, the h1 and p can be manipulated together. */
+  flex-direction: column;
+}
+
+#mainContent {
+  grid-column-start: 2;   /* Inserts the main content div into the third row down, spanning 6 of the central columns. */
+  grid-column-end: 8;
+  grid-row-start: 3;
+}
+
+
+/* Determing the nav grid layout */
+
+nav {
+  grid-column-start: 2;   /* The overall nav takes up the middle 6 columns of the second row... */
+  grid-column-end: 8;
+  grid-row-start: 2;
+}
+
+#mainNav {
+  display: grid;   /* However, the mainNav creates a resembling grid to insert it's child elements.  */
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#navHome {
+  grid-column-start: 1;  /* Where home comes first, */
+  border-right-style: solid;
+}
+
+#navReviews {
+  grid-column-end: -1;  /* ...and reviews comes last (with no border line) */
+  grid-row-start: 1;
+}
+
+
+/* Determing the first footer layout */
+
+.footer1 {
+  grid-row-start: 4;
+  grid-column-start: 1;    /* The first footer slots into the main grid,  */
+  grid-column-end: -1;
+
+  display: grid;   /* but is also a grid itself, resembling the larger grid. */
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#cycleMagazine {
+  grid-column-start: 2;
+}
+
+#latestReviews {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#Links {
+  grid-column-start: 7;
+}
+
+
+/* Determing the second footer layout */
+
+.footer2 {
+  grid-row-start: 5;
+  grid-column-start: 1;  /* Slots into the larger grid */
+  grid-column-end: -1;
+
+  display: grid;   /* and resembles the lines of the larger grid. */
+  grid-template-columns: repeat(8, 1fr);
+}
+
+#redFooterLeft {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+#redFooterRight {
+  grid-column-start: 6;
+  grid-column-end: 8;
+}
+
+#footer2Links {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+/* grid / flex layouts for the index page */
+#articleList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.articleListElement {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 9fr 1fr 4fr;
+}
+
+#pollAndComp {
+  grid-column-start: 3;
+}
+
+
+/* grid / flex layouts for the product page */
+
+
+#viewProduct {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* Uses an inner grid of 8 columns, but with only one row. */
+
+}
+
+#productGallery {
+  grid-column-start: 1; /* is on the left hand side. */
+
+  display: flex;   /* Lists the smaller images vertically down the side of the main one. */
+  flex-direction: column;
+}
+
+#mainProductImage {
+  grid-column-start: 2; /* The image fits in the largest part of the grid. */
+  grid-column-end: 6;
+}
+
+#productPurchase {  /* the information of regarding the purchase are aligned vertically. */
+  grid-column-start: 6; /* On the right hand side of the image. */
+  grid-column-end: 9;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#share {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+#similarProducts {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+#productReviewTitle {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+#reviews { /* The overall review list is a flexbox since the newly made reviews (via the javascript) need to be in the same format, the grid couldn't just be expanded. */
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  display: grid;  /* Every review is it's own grid of one row. */
+  grid-template-columns: 20% 20% 60%;
+  grid-template-rows: 100%;
+}
+
+.reviewMiddle {  /* The middle part of the review must have the elements aligned vertically. */
+  display: flex;
+  flex-direction: column;
+}
+
+.starsDiv {   /* The stars div must align the two sets of stars horizontally. */
+  display: flex;
+  flex-direction: row;
+}
